@@ -1,9 +1,10 @@
-import { createRoot } from "react-dom/client"
 import { BrowserRouter } from "react-router"
+
+import { createRoot } from "react-dom/client"
 
 import { Routing } from "@app/providers/routing/Routing"
 
-import { Loader } from "@shared/components/Loader/Loader.ui"
+import { Loader } from "@shared/components/Loader"
 import "@shared/config/styles/index.css"
 
 const container = document.getElementById("root")
