@@ -1,6 +1,6 @@
 import { create } from "zustand/react";
 
-import type { ILoaderStore } from "@shared/components/Loader/Loader.interface";
+import type { ILoaderStore } from "@shared/components/Loader/model/interface";
 
 export const useLoaderStore = create<ILoaderStore>()((set, get) => ({
   isLoading: false,

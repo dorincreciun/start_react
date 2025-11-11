@@ -1,17 +1,18 @@
-import type {Config} from "prettier"
+import type { Config } from "prettier"
 
 const config: Config = {
 	experimentalTernaries: true,
 	experimentalOperatorPosition: "start",
+
 	printWidth: 120,
 	tabWidth: 4,
 	useTabs: true,
+
 	semi: false,
 	singleQuote: false,
 	trailingComma: "all",
 	bracketSpacing: true,
 	arrowParens: "always",
-	objectWrap: "collapse",
 	singleAttributePerLine: true,
 
 	plugins: [
@@ -20,11 +21,25 @@ const config: Config = {
 	],
 
 	importOrder: [
-		"^react(.*)$",
+		// React first
+		"^react$",
+		"^react-dom$",
+		"^react-router(-dom)?$",
+
+		// then other external
 		"<THIRD_PARTY_MODULES>",
-		"^@shared/(.*)$",
+
+		// FSD layers
+		"^@app/(.*)$",
 		"^@pages/(.*)$",
-		"^[./]"
+		"^@processes/(.*)$",
+		"^@widgets/(.*)$",
+		"^@features/(.*)$",
+		"^@entities/(.*)$",
+		"^@shared/(.*)$",
+
+		// finally relative imports
+		"^[./]",
 	],
 
 	importOrderSeparation: true,
