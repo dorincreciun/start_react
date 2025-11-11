@@ -1,6 +1,6 @@
 export const TRouter = {
-    DEFAULT: "/",
-    FALLBACK: "*"
-}
+  DEFAULT: "/",
+  FALLBACK: "*",
+};
 
-export type TRouter = typeof TRouter[keyof typeof TRouter]
+export type TRouter = (typeof TRouter)[keyof typeof TRouter];

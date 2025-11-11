@@ -1,8 +1,11 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 
+import { Routing } from "@app/providers/routing/Routing";
+
+import { Loader } from "@shared/components/Loader/Loader.ui";
+
 import "../shared/config/index.css";
-import { Routing } from "@app/providers/routing/Routing.tsx";
 
 const container = document.getElementById("root");
 
@@ -15,5 +18,6 @@ const root = createRoot(container);
 root.render(
   <BrowserRouter>
     <Routing />
+    <Loader />
   </BrowserRouter>,
 );

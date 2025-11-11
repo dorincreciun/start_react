@@ -1,9 +1,7 @@
-import type {RouteObject} from "react-router";
+import type { RouteObject } from "react-router";
 
-import {RouteGuard} from "@app/providers/routing/RouteGuard.tsx";
+import { RouteGuard } from "@app/providers/routing/RouteGuard";
 
-
-export const RoutesPrivate: RouteObject[] = [{
-    element: <RouteGuard />,
-    children: []
-}]
+export const RoutesPrivate: RouteObject[] = [
+  { element: <RouteGuard />, children: [] },
+];
