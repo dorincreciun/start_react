@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        scale: 0.95;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        scale: 1
+    }
+    100% {
+        opacity: 0;
+        scale: 0.95;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@theme {
+    --animate-fade-in: fade-in 0.25s ease-out forwards;
+    --animate-fade-out: fade-out 0.25s ease-in forwards;
+
+    --animate-spinner-in: fade-in 0.25s ease-out forwards, spin 1s linear infinite;
+    --animate-spinner-out: fade-out 0.25s ease-in forwards;
+}
