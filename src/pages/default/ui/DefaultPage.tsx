@@ -1,7 +1,3 @@
-
 export const DefaultPage = () => {
-  return (
-    <div>
-    </div>
-  )
+    return <div>default page</div>
 }
